@@ -13,12 +13,12 @@ describe('Realizando test unitario de suma... ', () => {
 		chai.request(API_URL)
             .post('/post/suma')
             .send({
-                operador1: '70',
+                operador1: '60',
                 operador2: '40'
             })
 			.end(function(err, res) {
 				console.log(res.body)
-                expect(res.body.resultado).to.equal(100); // Se espera que el resultado sea 100.
+                expect(res.body.resultado).to.equal(90); // Se espera que el resultado sea 100.
 				done();
 			});
 	});
